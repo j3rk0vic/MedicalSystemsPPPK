@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalSystem.Web", "MedicalSystem.Web\MedicalSystem.Web.csproj", "{245F1520-FF16-4B3E-A981-A9E84E28E51E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniOrm", "MiniOrm\MiniOrm.csproj", "{579113AF-44C7-4286-8503-3BFC7654AF36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniOrm.Migrations", "MiniOrm.Migrations\MiniOrm.Migrations.csproj", "{14391596-690D-403F-BB7B-92E87A43A763}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{245F1520-FF16-4B3E-A981-A9E84E28E51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{245F1520-FF16-4B3E-A981-A9E84E28E51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{245F1520-FF16-4B3E-A981-A9E84E28E51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{245F1520-FF16-4B3E-A981-A9E84E28E51E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{579113AF-44C7-4286-8503-3BFC7654AF36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579113AF-44C7-4286-8503-3BFC7654AF36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579113AF-44C7-4286-8503-3BFC7654AF36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579113AF-44C7-4286-8503-3BFC7654AF36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14391596-690D-403F-BB7B-92E87A43A763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14391596-690D-403F-BB7B-92E87A43A763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14391596-690D-403F-BB7B-92E87A43A763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14391596-690D-403F-BB7B-92E87A43A763}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
