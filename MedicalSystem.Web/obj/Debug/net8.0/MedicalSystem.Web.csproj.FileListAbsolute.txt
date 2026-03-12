@@ -28,3 +28,10 @@ C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PR
 C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MedicalSystem.Web\obj\Debug\net8.0\MedicalSystem.Web.pdb
 C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MedicalSystem.Web\obj\Debug\net8.0\MedicalSystem.Web.genruntimeconfig.cache
 C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MedicalSystem.Web\obj\Debug\net8.0\ref\MedicalSystem.Web.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MedicalSystem.Web\bin\Debug\net8.0\Npgsql.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MedicalSystem.Web\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MedicalSystem.Web\bin\Debug\net8.0\MiniOrm.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MedicalSystem.Web\bin\Debug\net8.0\MiniOrm.pdb
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MedicalSystem.Web\obj\Debug\net8.0\MedicalSystem.Web.csproj.AssemblyReference.cache
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MedicalSystem.Web\obj\Debug\net8.0\MedicalSystem.Web.sourcelink.json
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MedicalSystem.Web\obj\Debug\net8.0\MedicalS.779670D1.Up2Date

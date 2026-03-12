@@ -1,0 +1,13 @@
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\bin\Debug\net8.0\MiniOrm.deps.json
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\bin\Debug\net8.0\MiniOrm.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\bin\Debug\net8.0\MiniOrm.pdb
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\obj\Debug\net8.0\MiniOrm.csproj.AssemblyReference.cache
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\obj\Debug\net8.0\MiniOrm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\obj\Debug\net8.0\MiniOrm.AssemblyInfoInputs.cache
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\obj\Debug\net8.0\MiniOrm.AssemblyInfo.cs
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\obj\Debug\net8.0\MiniOrm.csproj.CoreCompileInputs.cache
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\obj\Debug\net8.0\MiniOrm.sourcelink.json
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\obj\Debug\net8.0\MiniOrm.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\obj\Debug\net8.0\refint\MiniOrm.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\obj\Debug\net8.0\MiniOrm.pdb
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm\obj\Debug\net8.0\ref\MiniOrm.dll
