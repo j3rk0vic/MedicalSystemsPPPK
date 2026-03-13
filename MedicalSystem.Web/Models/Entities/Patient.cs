@@ -2,6 +2,7 @@
 
 namespace MedicalSystem.Web.Models.Entities;
 
+[Table("patients")]
 public class Patient
 {
     [PrimaryKey]
@@ -14,6 +15,7 @@ public class Patient
     [Column("last_name", IsNullable = false, Length = 100)]
     public string LastName { get; set; } = string.Empty;
     
+    [Unique]
     [Column("oib", IsNullable = false, Length = 11)]
     public string Oib { get; set; } = string.Empty;
     
