@@ -2,6 +2,7 @@
 
 namespace MedicalSystem.Web.Models.Entities;
 
+[Table("medications")]
 public class Medication
 {
     [PrimaryKey]

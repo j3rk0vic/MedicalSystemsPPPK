@@ -2,6 +2,7 @@
 
 namespace MedicalSystem.Web.Models.Entities;
 
+[Table("medical_records")]
 public class MedicalRecord
 {
     [PrimaryKey]
