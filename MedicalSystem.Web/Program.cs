@@ -1,7 +1,14 @@
+using MedicalSystem.Web.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
+                       ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+builder.Services.AddScoped<MedicalDbContext>(sp => new MedicalDbContext(connectionString));
 
 var app = builder.Build();
 
