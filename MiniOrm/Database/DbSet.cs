@@ -8,112 +8,166 @@ public class DbSet<T> where T : class
 {
     protected readonly DbContext _context;
 
+    private readonly NpgsqlConnection? _sharedConnection;
+    private readonly NpgsqlTransaction? _transaction;
+
     public DbSet(DbContext context)
     {
         _context = context;
     }
 
+    internal DbSet(DbContext context, NpgsqlConnection connection, NpgsqlTransaction transaction)
+    {
+        _context = context;
+        _sharedConnection = connection;
+        _transaction = transaction;
+    }
+
+    private (NpgsqlConnection connection, bool owned) AcquireConnection()
+    {
+        if (_sharedConnection != null)
+            return (_sharedConnection, false);
+        return (_context.CreateConnection(), true);
+    }
+
+    private NpgsqlCommand CreateCommand(string sql, NpgsqlConnection connection)
+    {
+        var cmd = new NpgsqlCommand(sql, connection);
+        if (_transaction != null)
+            cmd.Transaction = _transaction;
+        return cmd;
+    }
+
     public List<T> GetAll()
     {
-        var tableName = GetTableName();
-        var sql = $"SELECT * FROM {tableName}";
-
-        using var connection = _context.CreateConnection();
-        using var command = new NpgsqlCommand(sql, connection);
-        using var reader = command.ExecuteReader();
-
-        var results = new List<T>();
-        while (reader.Read())
-            results.Add(MapReaderToEntity(reader));
-
-        return results;
+        var sql = $"SELECT * FROM {GetTableName()}";
+        var (connection, owned) = AcquireConnection();                                
+        try                                         
+        {                                           
+            using var command = CreateCommand(sql,connection);                                        
+            using var reader = command.ExecuteReader();                            
+                  
+            var results = new List<T>();            
+            while (reader.Read())
+                results.Add(MapReaderToEntity(reader));
+            
+            return results;                         
+        }       
+        finally                                     
+        {
+            if (owned) 
+                connection.Dispose();
+        }
     }
 
     public T? GetById(int id)
     {
-        var tableName = GetTableName();
-        var pkColumn = GetPrimaryKeyColumnName();
-        var sql = $"SELECT * FROM {tableName} WHERE {pkColumn} = @id";
-
-        using var connection = _context.CreateConnection();
-        using var command = new NpgsqlCommand(sql, connection);
-        command.Parameters.AddWithValue("id", id);
-        using var reader = command.ExecuteReader();
-        
-        if (reader.Read())
-            return MapReaderToEntity(reader);
-
-        return null;
+        var pkColumn = GetPrimaryKeyColumnName();   
+        var sql = $"SELECT * FROM {GetTableName()} WHERE {pkColumn} = @id";                            
+                                                      
+        var (connection, owned) = AcquireConnection();
+        try                                         
+        {       
+            using var command = CreateCommand(sql, connection);                                        
+            command.Parameters.AddWithValue("id", id);                                                
+            using var reader = command.ExecuteReader();                            
+                  
+            if (reader.Read())                      
+                return MapReaderToEntity(reader);
+                                                      
+            return null;
+        }                                           
+        finally                                     
+        {
+            if (owned) 
+                connection.Dispose();        
+        } 
     }
 
     public void Insert(T entity)
     {
-        var tableName = GetTableName();
-        var properties = GetColumnProperties(excludePrimaryKey: true);
-
-        var columnNames = properties.Select(p => p.GetCustomAttribute<ColumnAttribute>()!.Name);
-        var paramNames = properties.Select(p => "@" + p.GetCustomAttribute<ColumnAttribute>()!.Name);
-
-        var sql = $"INSERT INTO {tableName} ({string.Join(", ", columnNames)}) VALUES ({string.Join(", ", paramNames)}) RETURNING id";
-
-        using var connection = _context.CreateConnection();
-        using var command = new NpgsqlCommand(sql, connection);
-
-        foreach (var property in properties)
+        var properties = GetColumnProperties(excludePrimaryKey: true);       
+        var columnNames = properties.Select(p =>    
+            p.GetCustomAttribute<ColumnAttribute>()!.Name);     
+        var paramNames = properties.Select(p => "@" + p.GetCustomAttribute<ColumnAttribute>()!.Name);   
+        var sql = $"INSERT INTO {GetTableName()} ({string.Join(", ", columnNames)}) VALUES ({string.Join(", ", paramNames)}) RETURNING id";
+                                                      
+        var (connection, owned) = AcquireConnection();
+        try                                         
+        {       
+            using var command = CreateCommand(sql, connection);                                        
+                                                      
+            foreach (var property in properties)    
+            {   
+                var columnAttr = property.GetCustomAttribute<ColumnAttribute>()!;    
+                var value = property.GetValue(entity) ?? DBNull.Value;          
+                command.Parameters.AddWithValue("@" + columnAttr.Name, value);                          
+            }   
+                                                      
+            var newId = command.ExecuteScalar();
+                                                      
+            GetPrimaryKeyProperty()?.SetValue(entity, Convert.ToInt32(newId));
+        }                                           
+        finally 
         {
-            var columnAttr = property.GetCustomAttribute<ColumnAttribute>()!;
-            var value = property.GetValue(entity) ?? DBNull.Value;
-
-            command.Parameters.AddWithValue("@" + columnAttr.Name, value);
-        }
-
-        var newId = command.ExecuteScalar();
-
-        var pkProperty = GetPrimaryKeyProperty();
-        pkProperty?.SetValue(entity, Convert.ToInt32(newId));
+            if (owned) 
+                connection.Dispose();        
+        } 
     }
 
     public void Update(T entity)
     {
-        var tableName = GetTableName();
-        var pkColumn = GetPrimaryKeyColumnName();
-        var pkProperty = GetPrimaryKeyProperty();
-        var pkValue = pkProperty!.GetValue(entity);
-        
-        var properties = GetColumnProperties(excludePrimaryKey: true);
+        var pkColumn = GetPrimaryKeyColumnName();   
+        var pkProperty = GetPrimaryKeyProperty()!;  
+        var pkValue = pkProperty.GetValue(entity);  
+                                                      
+        var properties = GetColumnProperties(excludePrimaryKey: true);       
         var setClauses = properties.Select(p =>
-        {
-            var colAttr = p.GetCustomAttribute<ColumnAttribute>()!;
-            return $"{colAttr.Name} = @{colAttr.Name}";
-        });
-
-        var sql = $"UPDATE {tableName} SET {string.Join(", ", setClauses)} WHERE {pkColumn} = @pk";
-
-        using var connection = _context.CreateConnection();
-        using var command = new NpgsqlCommand(sql, connection);
-
-        foreach (var property in properties)
-        {
-            var columnAttr = property.GetCustomAttribute<ColumnAttribute>()!;
-            var value = property.GetValue(entity) ?? DBNull.Value;
-            command.Parameters.AddWithValue("@" + columnAttr.Name, value);
+        {                                           
+            var colAttr = p.GetCustomAttribute<ColumnAttribute>()!;           
+            return $"{colAttr.Name} = @{colAttr.Name}";                                   
+        });     
+        var sql = $"UPDATE {GetTableName()} SET {string.Join(", ", setClauses)} WHERE {pkColumn} = @pk";
+                                                      
+        var (connection, owned) = AcquireConnection();
+        try                                         
+        {       
+            using var command = CreateCommand(sql, connection);                                        
+                                                      
+            foreach (var property in properties)    
+            {   
+                var columnAttr = property.GetCustomAttribute<ColumnAttribute>()!;    
+                var value = property.GetValue(entity) ?? DBNull.Value;          
+                command.Parameters.AddWithValue("@" + columnAttr.Name, value);                          
+            }   
+                                                      
+            command.Parameters.AddWithValue("@pk", pkValue);
+            command.ExecuteNonQuery();
+        }                                           
+        finally
+        {                                           
+            if (owned) 
+                connection.Dispose();
         }
-        
-        command.Parameters.AddWithValue("@pk", pkValue);
-        command.ExecuteNonQuery();
     }
 
     public void Delete(int id)
     {
-        var tableName = GetTableName();
-        var pkColumn = GetPrimaryKeyColumnName();
-        
-        var sql = $"DELETE FROM {tableName} WHERE {pkColumn} = @id";
-        
-        using var connection = _context.CreateConnection();
-        using var command = new NpgsqlCommand(sql, connection);
-        command.Parameters.AddWithValue("@id", id);
-        command.ExecuteNonQuery();
+        var pkColumn = GetPrimaryKeyColumnName();   
+        var sql = $"DELETE FROM {GetTableName()} WHERE {pkColumn} = @id";                            
+                                                      
+        var (connection, owned) = AcquireConnection();
+        try                                         
+        {       
+            using var command = CreateCommand(sql, connection);                                        
+            command.Parameters.AddWithValue("@id", id);                                                
+            command.ExecuteNonQuery();
+        }                                           
+        finally                                     
+        {                                           
+            if (owned) 
+                connection.Dispose();        
+        } 
     }
 
     private string GetTableName()
