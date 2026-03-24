@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Linq.Expressions;
+using System.Reflection;
 using MiniOrm.Attributes;
 using Npgsql;
 
@@ -228,4 +229,17 @@ public class DbSet<T> where T : class
 
         return entity;
     }
+    
+    public QueryBuilder<T> Where(Expression<Func<T, bool>> predicate)
+        => new QueryBuilder<T>(_context, _sharedConnection,                           
+            _transaction).Where(predicate);                                                   
+   
+    public QueryBuilder<T> OrderBy<TKey>(Expression<Func<T, TKey>> keySelector)       
+        => new QueryBuilder<T>(_context, _sharedConnection,
+            _transaction).OrderBy(keySelector);                                               
+   
+    public QueryBuilder<T> OrderByDescending<TKey>(Expression<Func<T, TKey>>          
+        keySelector)    
+        => new QueryBuilder<T>(_context, _sharedConnection,
+            _transaction).OrderByDescending(keySelector);
 }
