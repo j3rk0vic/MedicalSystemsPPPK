@@ -24,4 +24,11 @@ public class Examination
 
     [Column("notes")] 
     public string Notes { get; set; } = string.Empty;
+    
+    [BelongsTo(typeof(Patient), "patient_id")]                                        
+    public Patient? Patient { get; set; }     
+                                       
+    [HasMany(typeof(Prescription), "examination_id")]                                 
+    public List<Prescription> Prescriptions { get; set; } = new();
+
 }

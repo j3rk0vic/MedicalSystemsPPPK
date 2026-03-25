@@ -242,4 +242,8 @@ public class DbSet<T> where T : class
         keySelector)    
         => new QueryBuilder<T>(_context, _sharedConnection,
             _transaction).OrderByDescending(keySelector);
+    
+    public QueryBuilder<T> Include(Expression<Func<T, object?>> navigationProperty)   
+        => new QueryBuilder<T>(_context, _sharedConnection,
+            _transaction).Include(navigationProperty);
 }
