@@ -21,4 +21,7 @@ public class MedicalRecord
 
     [Column("chronic_diseases", IsNullable = false)]
     public string ChronicDiseases { get; set; } = string.Empty;
+    
+    [BelongsTo(typeof(Patient), "patient_id")]
+    public Patient? Patient { get; set; }
 }

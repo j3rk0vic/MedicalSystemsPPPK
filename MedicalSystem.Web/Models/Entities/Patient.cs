@@ -21,4 +21,10 @@ public class Patient
     
     [Column("date_of_birth", IsNullable = false)]
     public DateTime DateOfBirth { get; set; }
+    
+    [HasOne(typeof(MedicalRecord), "patient_id")]
+    public MedicalRecord? MedicalRecord { get; set; }                                 
+                                                                                    
+    [HasMany(typeof(Examination), "patient_id")]
+    public List<Examination> Examinations { get; set; } = new(); 
 }

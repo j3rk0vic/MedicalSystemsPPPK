@@ -26,4 +26,10 @@ public class Prescription
     
     [Column("duration_days", IsNullable = false)]
     public int DurationDays { get; set; }
+    
+    [BelongsTo(typeof(Examination), "examination_id")]                                
+    public Examination? Examination { get; set; }     
+                                                                                    
+    [BelongsTo(typeof(Medication), "medication_id")]
+    public Medication? Medication { get; set; }
 }
