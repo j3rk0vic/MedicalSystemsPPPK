@@ -1,3 +1,67 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System.Reflection;
+using MiniOrm.Migrations;                                        
 
-Console.WriteLine("Hello, World!");
+const string ConnectionString = "Host=localhost;Port=5432;Database=medical_system;Username=postgres;Password=your_password";
+                                                                 
+const string MigrationsFolder = "Migrations";
+ 
+if (args.Length == 0)                                            
+{               
+    PrintHelp();
+    return;
+}
+
+var runner   = new MigrationRunner(ConnectionString);            
+var command  = args[0].ToLower();
+                                                                 
+switch (command)
+{
+    case "add":
+        if (args.Length < 2)
+        {
+            Console.WriteLine("Usage: dotnet run -- add <MigrationName>");                                               
+            return;
+        }                                                        
+        var generator = new MigrationGenerator();
+        generator.Generate(args[1], MigrationsFolder);           
+        break;
+                                                                 
+    case "run": 
+        runner.Run(LoadMigrations());
+        break;
+
+    case "rollback":                                             
+        runner.Rollback(LoadMigrations());
+        break;                                                   
+                
+    case "status":
+        runner.PrintStatus(LoadMigrations());
+        break;
+
+    default:
+        Console.WriteLine($"Unknown command: '{command}'");
+        PrintHelp();                                             
+        break;
+}
+
+static List<IMigration> LoadMigrations()
+{                                                                
+    return Assembly.GetExecutingAssembly()
+        .GetTypes()                                              
+        .Where(t => typeof(IMigration).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract)                                 
+        .Select(t => (IMigration)Activator.CreateInstance(t)!)
+        .OrderBy(m => m.Name)                                    
+        .ToList();
+}                                                                
+                
+static void PrintHelp()
+{
+    Console.WriteLine();
+    Console.WriteLine("MiniOrm Migrations");
+    Console.WriteLine("──────────────────");
+    Console.WriteLine("  dotnet run -- add <Name>   Generate a new migration file");                                            
+    Console.WriteLine("  dotnet run -- run          Apply all pending migrations");                                       
+    Console.WriteLine("  dotnet run -- rollback     Revert the last applied migration");
+    Console.WriteLine("  dotnet run -- status       Show which migrations are applied");                                        
+    Console.WriteLine();
+}

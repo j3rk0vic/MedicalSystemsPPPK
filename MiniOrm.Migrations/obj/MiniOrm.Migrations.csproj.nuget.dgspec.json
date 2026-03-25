@@ -4,6 +4,78 @@
     "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm.Migrations\\MiniOrm.Migrations.csproj": {}
   },
   "projects": {
+    "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MedicalSystem.Web\\MedicalSystem.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MedicalSystem.Web\\MedicalSystem.Web.csproj",
+        "projectName": "MedicalSystem.Web",
+        "projectPath": "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MedicalSystem.Web\\MedicalSystem.Web.csproj",
+        "packagesPath": "C:\\Users\\ijerk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MedicalSystem.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ijerk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm\\MiniOrm.csproj": {
+                "projectPath": "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm\\MiniOrm.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.308/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm.Migrations\\MiniOrm.Migrations.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -12,6 +84,84 @@
         "projectPath": "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm.Migrations\\MiniOrm.Migrations.csproj",
         "packagesPath": "C:\\Users\\ijerk\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm.Migrations\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ijerk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MedicalSystem.Web\\MedicalSystem.Web.csproj": {
+                "projectPath": "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MedicalSystem.Web\\MedicalSystem.Web.csproj"
+              },
+              "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm\\MiniOrm.csproj": {
+                "projectPath": "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm\\MiniOrm.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.308/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm\\MiniOrm.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm\\MiniOrm.csproj",
+        "projectName": "MiniOrm",
+        "projectPath": "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm\\MiniOrm.csproj",
+        "packagesPath": "C:\\Users\\ijerk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ijerk\\Desktop\\coll\\ALGEBRA\\3. GODINA\\5. SEMESTAR\\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\\MedicalSystemProject\\MiniOrmMedicalSystem\\MiniOrm\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +199,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
