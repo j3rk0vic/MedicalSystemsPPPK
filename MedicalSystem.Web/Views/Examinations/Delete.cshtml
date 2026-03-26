@@ -1,0 +1,35 @@
+﻿@model MedicalSystem.Web.Models.Entities.Examination
+@{
+    ViewData["Title"] = "Delete Examination";
+}
+
+<h2>Delete Examination</h2>
+<hr/>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="alert alert-danger">
+            <h4 class="alert-heading"><i class="bi bi-exclamation-triangle"></i> Warning!</h4>
+            <p>Are you sure you want to delete this examination record? This action cannot be undone.</p>
+            <hr>
+            <dl class="row mb-0">
+                <dt class="col-sm-4">Type:</dt>
+                <dd class="col-sm-8">@Model.Type</dd>
+
+                <dt class="col-sm-4">Date:</dt>
+                <dd class="col-sm-8">@Model.Date.ToString("dd.MM.yyyy HH:mm")</dd>
+
+                <dt class="col-sm-4">Diagnosis:</dt>
+                <dd class="col-sm-8">@Model.Diagnosis</dd>
+            </dl>
+        </div>
+
+        <form asp-action="DeleteConfirmed" method="post">
+            @* Ensure you have a hidden input for the ID so the POST action knows what to delete *@
+            <input type="hidden" asp-for="Id" />
+            
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>

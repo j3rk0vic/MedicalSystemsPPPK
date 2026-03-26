@@ -1,0 +1,46 @@
+﻿@model List<MedicalSystem.Web.Models.Entities.Patient>
+@{ ViewData["Title"] = "Patients"; }
+
+<div class="d-flex justify-content-between align-items-center
+  mb-3">
+    <h2>Patients</h2>
+    <a asp-action="Create" class="btn btn-primary">+ Add
+        Patient</a>
+</div>
+
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>OIB</th>
+        <th>Date of Birth</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var patient in Model)
+    {
+        <tr>
+            <td>@patient.Id</td>
+            <td>@patient.FirstName</td>
+            <td>@patient.LastName</td>
+            <td>@patient.Oib</td>
+
+            <td>@patient.DateOfBirth.ToString("dd.MM.yyyy")</td>
+            <td>
+                <a asp-action="Details"
+                   asp-route-id="@patient.Id" class="btn btn-sm
+  btn-info">Details</a>
+                <a asp-action="Edit"
+                   asp-route-id="@patient.Id" class="btn btn-sm
+  btn-warning">Edit</a>
+                <a asp-action="Delete"
+                   asp-route-id="@patient.Id" class="btn btn-sm
+  btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

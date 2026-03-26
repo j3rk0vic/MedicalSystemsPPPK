@@ -1,0 +1,17 @@
+﻿@model MedicalSystem.Web.Models.Entities.Patient
+@{ ViewData["Title"] = "Delete Patient"; }
+
+<h2>Delete Patient</h2>
+<hr />
+
+<div class="alert alert-danger">
+    Are you sure you want to delete <strong>@Model.FirstName
+        @Model.LastName</strong> (OIB: @Model.Oib)?
+    <br/>This action cannot be undone.
+</div>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Yes,
+        Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
