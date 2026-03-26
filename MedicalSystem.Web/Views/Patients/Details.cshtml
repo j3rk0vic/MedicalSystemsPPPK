@@ -1,0 +1,81 @@
+﻿@model MedicalSystem.Web.Models.Entities.Patient
+  @{ ViewData["Title"] = "Patient Details"; }
+
+  <div class="d-flex justify-content-between align-items-center
+  mb-3">
+      <h2>@Model.FirstName @Model.LastName</h2>
+      <a asp-action="Index" class="btn btn-secondary">← Back</a>
+  </div>
+
+  {{!-- Patient basic info --}}
+  <div class="card mb-4">
+      <div class="card-header"><strong>Personal
+  Information</strong></div>
+      <div class="card-body">
+          <p><strong>OIB:</strong> @Model.Oib</p>
+          <p><strong>Date of Birth:</strong>
+  @Model.DateOfBirth.ToString("dd.MM.yyyy")</p>
+      </div>
+  </div>
+
+  {{!-- 1:1 Navigation — Medical Record --}}
+  <div class="card mb-4">
+      <div class="card-header"><strong>Medical
+  Record</strong></div>
+      <div class="card-body">
+          @if (Model.MedicalRecord != null)
+          {
+              <p><strong>Blood Type:</strong>
+  @Model.MedicalRecord.BloodType</p>
+              <p><strong>Allergies:</strong>
+  @(string.IsNullOrEmpty(Model.MedicalRecord.Allergies) ? "None" :
+  Model.MedicalRecord.Allergies)</p>
+              <p><strong>Chronic Diseases:</strong>
+  @Model.MedicalRecord.ChronicDiseases</p>
+          }
+          else
+          {
+              <p class="text-muted">No medical record found.</p>
+          }
+      </div>
+  </div>
+
+  {{!-- 1:many Navigation — Examinations --}}
+  <div class="card">
+      <div class="card-header"><strong>Examinations
+  (@Model.Examinations.Count)</strong></div>
+      <div class="card-body">
+          @if (Model.Examinations.Any())
+          {
+              <table class="table table-sm">
+                  <thead>
+                      <tr>
+                          <th>Type</th>
+                          <th>Date</th>
+                          <th>Diagnosis</th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      @foreach (var exam in Model.Examinations.OrderByDescending(e => e.Date))
+                      {
+                          <tr>
+                              <td>@exam.Type</td>
+
+                              <td>@exam.Date.ToString("dd.MM.yyyy")</td>
+                              <td>@exam.Diagnosis</td>
+                              <td>
+                                  <a asp-controller="Examinations" asp-action="Details"
+                                     asp-route-id="@exam.Id" class="btn btn-sm btn-info">View</a>
+                              </td>
+                          </tr>
+                      }
+                  </tbody>
+              </table>
+          }
+          else
+          {
+              <p class="text-muted">No examinations found.</p>
+          }
+      </div>
+  </div>

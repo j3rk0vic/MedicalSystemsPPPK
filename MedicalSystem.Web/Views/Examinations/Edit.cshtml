@@ -1,0 +1,71 @@
+﻿@using MedicalSystem.Web.Models.Entities
+@model Examination
+@{
+    ViewData["Title"] = "Edit Examination";
+    var patients = ViewBag.Patients as IEnumerable<Patient> ?? new List<Patient>();
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                    <h2 class="h5 mb-0">Edit Examination Details</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="mb-3">
+                            <label asp-for="PatientId" class="form-label fw-bold">Patient</label>
+                            <select asp-for="PatientId" class="form-select" 
+                                    asp-items="@(new SelectList(patients, "Id", "FirstName", Model.PatientId))" required>
+                                <option value="">-- Select Patient --</option>
+                            </select>
+                            <span asp-validation-for="PatientId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Type" class="form-label fw-bold">Examination Type</label>
+                            <select asp-for="Type" class="form-select" 
+                                    asp-items="Html.GetEnumSelectList<ExaminationType>()" required>
+                            </select>
+                            <span asp-validation-for="Type" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Date" class="form-label fw-bold">Date & Time</label>
+                            <input asp-for="Date" type="datetime-local" class="form-control" 
+                                   value="@Model.Date.ToString("yyyy-MM-ddTHH:mm")" required />
+                            <span asp-validation-for="Date" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Diagnosis" class="form-label fw-bold">Diagnosis</label>
+                            <input asp-for="Diagnosis" class="form-control" placeholder="Enter primary diagnosis" />
+                            <span asp-validation-for="Diagnosis" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Notes" class="form-label fw-bold">Clinical Notes</label>
+                            <textarea asp-for="Notes" class="form-control" rows="4" placeholder="Additional observations..."></textarea>
+                            <span asp-validation-for="Notes" class="text-danger"></span>
+                        </div>
+
+                        <hr />
+
+                        <div class="d-grid gap-2 d-md-block">
+                            <button type="submit" class="btn btn-warning px-4">Save Changes</button>
+                            <a asp-action="Index" class="btn btn-secondary px-4">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

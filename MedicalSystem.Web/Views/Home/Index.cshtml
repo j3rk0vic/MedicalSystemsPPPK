@@ -1,8 +1,43 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@{ ViewData["Title"] = "Medical System"; }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mb-5">
+    <h1>Medical System</h1>
+    <p class="text-muted">Powered by MiniOrm — custom ORM
+        implementation</p>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h4 class="card-title">Patients</h4>
+                <p class="card-text text-muted">Manage patient
+                    records, view medical history and examinations.</p>
+                <a asp-controller="Patients" asp-action="Index"
+                   class="btn btn-primary">Go to Patients</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h4 class="card-title">Examinations</h4>
+                <p class="card-text text-muted">Manage
+                    examinations, diagnoses, and prescriptions.</p>
+                <a asp-controller="Examinations"
+                   asp-action="Index" class="btn btn-primary">Go to Examinations</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <h4 class="card-title">Medications</h4>
+                <p class="card-text text-muted">Manage the
+                    medication catalogue used in prescriptions.</p>
+                <a asp-controller="Medications"
+                   asp-action="Index" class="btn btn-primary">Go to Medications</a>
+            </div>
+        </div>
+    </div>
 </div>

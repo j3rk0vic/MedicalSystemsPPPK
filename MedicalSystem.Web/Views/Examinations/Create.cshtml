@@ -1,0 +1,47 @@
+﻿@using MedicalSystem.Web.Models.Entities
+@{ ViewData["Title"] = "Add Examination"; }
+
+<h2>Add Examination</h2>
+<hr />
+
+<form method="post" style="max-width: 500px;">
+    <div class="mb-3">
+        <label class="form-label">Patient</label>
+        <select name="PatientId" class="form-select" required>
+            <option value="">-- Select Patient --</option>
+            @foreach (var patient in
+                      (List<Patient>)ViewBag.Patients)
+            {
+                <option value="@patient.Id">@patient.FirstName
+                    @patient.LastName</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Type</label>
+        <select name="Type" class="form-select" required>
+            @foreach (var type in
+                      Enum.GetValues<ExaminationType>())
+            {
+                <option value="@((int)type)">@type</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Date</label>
+        <input type="datetime-local" name="Date"
+               class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Diagnosis</label>
+        <input type="text" name="Diagnosis" class="form-control"
+        />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Notes</label>
+        <textarea name="Notes" class="form-control"
+  rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

@@ -18,12 +18,72 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MedicalSystem.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Pages/Patients/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Examinations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Examinations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Examinations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Examinations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Examinations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbWluYXRpb25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Medications/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhdGlvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Medications/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhdGlvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Medications/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhdGlvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Medications/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Patients/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Patients/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Patients/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Patients/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Patients/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ijerk/Desktop/coll/ALGEBRA/3. GODINA/5. SEMESTAR/PRISTUP PODACIMA IZ PROGRAMSKOG KODA/MedicalSystemProject/MiniOrmMedicalSystem/MedicalSystem.Web/Views/Shared/Error.cshtml]

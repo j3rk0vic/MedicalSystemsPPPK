@@ -13,3 +13,17 @@ C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PR
 C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\obj\Debug\net8.0\MiniOrm.Migrations.pdb
 C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\obj\Debug\net8.0\MiniOrm.Migrations.genruntimeconfig.cache
 C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\obj\Debug\net8.0\ref\MiniOrm.Migrations.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\MedicalSystem.Web.deps.json
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\MedicalSystem.Web.runtimeconfig.json
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\appsettings.json
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\MedicalSystem.Web.staticwebassets.runtime.json
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\MedicalSystem.Web.exe
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\Npgsql.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\MedicalSystem.Web.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\MiniOrm.dll
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\MiniOrm.pdb
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\bin\Debug\net8.0\MedicalSystem.Web.pdb
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\obj\Debug\net8.0\MiniOrm.Migrations.csproj.AssemblyReference.cache
+C:\Users\ijerk\Desktop\coll\ALGEBRA\3. GODINA\5. SEMESTAR\PRISTUP PODACIMA IZ PROGRAMSKOG KODA\MedicalSystemProject\MiniOrmMedicalSystem\MiniOrm.Migrations\obj\Debug\net8.0\MiniOrm..1CC5077A.Up2Date
