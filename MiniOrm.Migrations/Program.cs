@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using MiniOrm.Migrations;                                        
 
-const string ConnectionString = "Host=localhost;Port=5432;Database=medical_system;Username=postgres;Password=your_password";
+const string ConnectionString = "Host=ep-cold-thunder-agonl6uv-pooler.c-2.eu-central-1.aws.neon.tech;Database=neondb;Username=neondb_owner;Password=npg_2S5oxbmXDBwq;SSLMode=Require;Trust Server Certificate=true";
                                                                  
 const string MigrationsFolder = "Migrations";
  

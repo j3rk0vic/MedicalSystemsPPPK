@@ -15,12 +15,33 @@ public class ExaminationsController : Controller
 
     // GET /Examinations
     // Uses Include to show patient name in the list (many:1 navigation)                                                      
-    public IActionResult Index()
-    {                                                            
-        var examinations = _db.Examinations
-            .Include(e => e.Patient)
-            .ToList();
-        return View(examinations);                               
+    public IActionResult Index(int? patientId)
+    {                                                          
+        List<Examination> examinations;
+                                                             
+        if (patientId.HasValue)
+        {
+            // Fluent API: Where() + Include() chained together
+            examinations = _db.Examinations                    
+                .Where(e => e.PatientId == patientId.Value)
+                .ToList();                                     
+                  
+            // Load patient names separately for filtered results         
+                examinations = _db.Examinations                    
+                    .Include(e => e.Patient)
+                    .Where(e => e.PatientId == patientId.Value)    
+                    .ToList();
+        }                                                      
+        else        
+        {
+            examinations = _db.Examinations
+                .Include(e => e.Patient)
+                .ToList();                                     
+        }
+                                                             
+        ViewBag.Patients          = _db.Patients.GetAll();
+        ViewBag.SelectedPatientId = patientId;
+        return View(examinations);                             
     }
                                                                  
     // GET /Examinations/Details/5
