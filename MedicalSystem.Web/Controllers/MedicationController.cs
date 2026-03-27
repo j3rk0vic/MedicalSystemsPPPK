@@ -14,11 +14,18 @@ public class MedicationsController : Controller
     }
 
     // GET /Medications
-    public IActionResult Index()
-    {                                                            
-        var medications = _db.Medications.GetAll();
-        return View(medications);                                
-    }           
+    public IActionResult Index(string? sortBy)
+    {                                                          
+        var medications = sortBy switch
+        {                                                      
+            "price" => _db.Medications.OrderBy(m => m.Price).ToList(),                                         
+            "price_desc" => _db.Medications.OrderByDescending(m => m.Price).ToList(),                                     
+            "name" => _db.Medications.OrderBy(m => m.Name).ToList(),_ => _db.Medications.GetAll()
+        };                                                     
+   
+        ViewBag.SortBy = sortBy;                               
+        return View(medications);
+    }         
 
     // GET /Medications/Create
     public IActionResult Create()

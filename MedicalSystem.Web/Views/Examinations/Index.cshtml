@@ -1,4 +1,5 @@
-﻿@model IEnumerable<MedicalSystem.Web.Models.Entities.Examination>
+﻿@using MedicalSystem.Web.Models.Entities
+@model List<Examination>
 @{
     ViewData["Title"] = "Examinations";
 }
@@ -9,6 +10,33 @@
         <i class="bi bi-plus-lg"></i> + Add Examination
     </a>
 </div>
+
+@* Filter by patient — demonstrates Where() fluent query *@
+<form method="get" class="row g-2 align-items-center mb-3">
+    <div class="col-auto">
+        <label class="col-form-label">Filter by Patient:</label>
+    </div>
+    <div class="col-auto">
+        <select name="patientId" class="form-select">
+            <option value="">-- All Patients --</option>
+            @foreach (var patient in (List<Patient>)ViewBag.Patients)
+            {
+                if (ViewBag.SelectedPatientId != null && (int)ViewBag.SelectedPatientId == patient.Id)
+                {
+                    <option value="@patient.Id" selected>@patient.FirstName @patient.LastName</option>
+                }
+                else
+                {
+                    <option value="@patient.Id">@patient.FirstName @patient.LastName</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-outline-secondary">Filter</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Clear</a>
+    </div>
+</form>
 
 <div class="table-responsive">
     <table class="table table-striped table-hover">

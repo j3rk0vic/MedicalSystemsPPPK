@@ -30,9 +30,10 @@ public class MigrationGenerator
             .ToList();                                           
                 
         // Timestamp prefix ensures alphabetical order = chronological order
-        var timestamp = DateTime.UtcNow.ToString("yyyyMMddHHmmss");                      
-        var className = $"{timestamp}_{migrationName}";
-        var fileName  = $"{className}.cs";                       
+        var timestamp = DateTime.UtcNow.ToString("yyyyMMddHHmmss");
+        var migrationId = $"{timestamp}_{migrationName}";                    
+        var className   = $"Migration_{migrationId}";        
+        var fileName    = $"{migrationId}.cs";                       
         var filePath  = Path.Combine(outputFolder, fileName);    
    
         // Indent SQL nicely inside the verbatim string          
@@ -44,7 +45,7 @@ public class MigrationGenerator
                                                                              
             public class {className} : IMigration
             {{
-                public string Name => ""{className}"";
+                public string Name => ""{migrationId}"";
                                                                              
                 public string Up() => @""
                     {upSql}                                                  

@@ -1,38 +1,55 @@
 ﻿@model List<MedicalSystem.Web.Models.Entities.Medication>
-@{ ViewData["Title"] = "Medications"; }
-
-<div class="d-flex justify-content-between align-items-center
-  mb-3">
-    <h2>Medications</h2>
-    <a asp-action="Create" class="btn btn-primary">+ Add
-        Medication</a>
-</div>
-
-<table class="table table-striped table-hover">
-    <thead class="table-dark">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Manufacturer</th>
-        <th>Price (€)</th>
-        <th>Actions</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var med in Model)
-    {
-        <tr>
-            <td>@med.Id</td>
-            <td>@med.Name</td>
-            <td>@med.Manufacturer</td>
-            <td>@med.Price.ToString("0.00")</td>
-            <td>
-                <a asp-action="Edit"   asp-route-id="@med.Id"
-                   class="btn btn-sm btn-warning">Edit</a>
-                <a asp-action="Delete" asp-route-id="@med.Id"
-                   class="btn btn-sm btn-danger">Delete</a>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+  @{ ViewData["Title"] = "Medications"; }                    
+                  
+  <div class="d-flex justify-content-between                 
+  align-items-center mb-3">
+      <h2>Medications</h2>
+      <a asp-action="Create" class="btn btn-primary">+ Add
+  Medication</a>                                             
+  </div>
+                                                             
+  <table class="table table-striped table-hover">
+      <thead class="table-dark">
+          <tr>
+              <th>ID</th>
+              {{!-- Clicking Name sorts by name --}}         
+              <th><a asp-action="Index"
+  asp-route-sortBy="name" class="text-white">Name ↕</a></th> 
+              <th>Manufacturer</th>
+              {{!-- Clicking Price toggles asc/desc --}}     
+              <th>
+                  @if ((string?)ViewBag.SortBy == "price")   
+                  {
+                      <a asp-action="Index"                  
+  asp-route-sortBy="price_desc" class="text-white">Price     
+  ↑</a>
+                  }                                          
+                  else
+                  {
+                      <a asp-action="Index"
+  asp-route-sortBy="price" class="text-white">Price ↓</a>    
+                  }
+              </th>                                          
+              <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          @foreach (var med in Model)
+          {                                                  
+              <tr>
+                  <td>@med.Id</td>                           
+                  <td>@med.Name</td>
+                  <td>@med.Manufacturer</td>
+                  <td>@med.Price.ToString("0.00") €</td>     
+                  <td>
+                      <a asp-action="Edit"                   
+  asp-route-id="@med.Id" class="btn btn-sm                   
+  btn-warning">Edit</a>
+                      <a asp-action="Delete"                 
+  asp-route-id="@med.Id" class="btn btn-sm                   
+  btn-danger">Delete</a>
+                  </td>                                      
+              </tr>
+          }
+      </tbody>
+  </table>
